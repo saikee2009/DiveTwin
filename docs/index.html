@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DiveTwin - overlay and compare two videos</title>
+<meta name="description" content="DiveTwin overlays two videos of the same movement so coaches and athletes can compare technique frame by frame - diving, gymnastics, skating, any repeatable motion. iPhone, iPad and Mac.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --accent: #0a84ff;
+    --fg: #1c1c1e;
+    --muted: #6b6b70;
+    --bg: #ffffff;
+    --card: #f5f5f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#f2f2f7; --muted:#a1a1a6; --bg:#000; --card:#1c1c1e; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+  header { text-align: center; padding: 64px 20px 40px; }
+  h1 { font-size: 2.6em; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .tag { font-size: 1.25em; color: var(--muted); margin: 0 auto 28px; max-width: 640px; }
+  .cta {
+    display: inline-block; background: var(--accent); color: #fff; text-decoration: none;
+    font-weight: 600; padding: 14px 26px; border-radius: 12px; font-size: 1.05em;
+  }
+  .cta.secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); margin-left: 8px; }
+  section { padding: 32px 0; }
+  h2 { font-size: 1.5em; letter-spacing: -0.01em; }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .feature { background: var(--card); border-radius: 14px; padding: 18px 20px; }
+  .feature h3 { margin: 0 0 6px; font-size: 1.1em; }
+  .feature p { margin: 0; color: var(--muted); font-size: 0.97em; }
+  .video { position: relative; padding-top: 56.25%; border-radius: 14px; overflow: hidden; background: var(--card); }
+  .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+  .shots img { width: 100%; border-radius: 12px; display: block; }
+  footer { text-align: center; color: var(--muted); font-size: 0.9em; padding: 40px 20px 60px; }
+  footer a { color: var(--muted); }
+  .note { color: var(--muted); font-size: 0.9em; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>DiveTwin</h1>
+      <p class="tag">Overlay two videos of the same movement and compare them frame by frame - in sync, in slow motion. Diving, gymnastics, skating, a golf swing, any repeatable motion.</p>
+      <!-- Replace the id below if your App Store ID ever changes -->
+      <a class="cta" href="https://apps.apple.com/app/id6789723353">Download on the App Store</a>
+      <a class="cta secondary" href="#how">See how it works</a>
+      <p class="note" style="margin-top:16px;">Free to try. iPhone, iPad and Mac - one Pro purchase covers all your devices.</p>
+    </div>
+  </header>
+
+  <div class="wrap">
+
+    <section id="how">
+      <h2>How it works</h2>
+      <div class="features">
+        <div class="feature"><h3>1. Load two clips</h3><p>A reference attempt and the one you want to compare.</p></div>
+        <div class="feature"><h3>2. Mark the same instant</h3><p>Scrub each clip to the same moment (for example, take-off) and press Mark. The timelines lock together.</p></div>
+        <div class="feature"><h3>3. Play them as one</h3><p>Sync playback, slow motion, frame-by-frame, and a blend slider.</p></div>
+        <div class="feature"><h3>4. See the difference</h3><p>Normal ghost overlay, Lighten, or Difference to light up exactly where the two diverge.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Watch the demo</h2>
+      <!-- Paste your YouTube video ID between /embed/ and the closing quote -->
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                title="DiveTwin demo" allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </div>
+      <p class="note">Replace <code>YOUR_VIDEO_ID</code> in index.html with your YouTube video ID.</p>
+    </section>
+
+    <section>
+      <h2>Screenshots</h2>
+      <div class="shots">
+        <!-- Drop your images in the same folder and update the filenames -->
+        <img src="shot-overlay.png" alt="Overlay of two dives" onerror="this.style.display='none'">
+        <img src="shot-blend.png" alt="Blend modes" onerror="this.style.display='none'">
+        <img src="shot-export.png" alt="Export the overlay" onerror="this.style.display='none'">
+      </div>
+      <p class="note">Add screenshot files (e.g. shot-overlay.png) to this folder to fill this row.</p>
+    </section>
+
+    <section>
+      <h2>Everything stays on your device</h2>
+      <p>DiveTwin has no ads, no accounts, and no network use - your videos never leave your device. See the <a href="privacy.html">privacy policy</a> and <a href="support.html">support page</a>.</p>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="wrap">
+      DiveTwin &middot; <a href="privacy.html">Privacy</a> &middot; <a href="support.html">Support</a> &middot;
+      <a href="mailto:atonal.amicus.1i@icloud.com">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>
